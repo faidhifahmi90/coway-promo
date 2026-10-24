@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/fendi.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/products/sennoplus.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -78,32 +79,29 @@
           <div class="halo" aria-hidden="true"></div>
           <div class="ring" data-depth="0.12" aria-hidden="true"></div>
           <div class="ring r2" data-depth="0.22" aria-hidden="true"></div>
+          <div class="floor" aria-hidden="true"></div>
 
-          <figure class="portrait" data-depth="0.06">
-            <img src="assets/fendi.webp" alt="Fendi, Coway Health Consultant" width="853" height="1280" fetchpriority="high" decoding="async">
-            <figcaption class="portrait-id">
-              <span class="dot"></span>
-              <span><b>Fendi</b><small>Coway Health Consultant</small></span>
-            </figcaption>
-          </figure>
+          <div class="layer l-storm" data-depth="0.25" aria-hidden="true"><img src="assets/products/storm2.webp" alt="" loading="lazy"></div>
+          <div class="layer l-chair" data-depth="0.3" aria-hidden="true"><img src="assets/products/sennoplus.webp" alt="" loading="lazy"></div>
+          <div class="layer l-wash" data-depth="0.35" aria-hidden="true"><img src="assets/products/wd129.webp" alt="" loading="lazy"></div>
+          <div class="layer l-person" data-depth="0.1">
+            <img src="assets/fendi.webp" alt="Fendi, Coway Health Consultant" width="387" height="1106" fetchpriority="high" decoding="async">
+          </div>
+          <div class="layer l-villaem" data-depth="0.6" aria-hidden="true"><img src="assets/products/villaem3.webp" alt="" loading="lazy"></div>
+          <div class="layer l-neon" data-depth="0.8" aria-hidden="true"><img src="assets/products/neon.webp" alt="" loading="lazy"></div>
 
-          <div class="float float-price" data-depth="0.5" aria-hidden="true">
+          <div class="float float-price" data-depth="1" aria-hidden="true">
             <small>Semua model</small>
             <b>RM20</b><span>/bulan</span>
             <em>3 · 5 · 7 bulan pertama*</em>
           </div>
-
-          <div class="float float-chip float-product" data-depth="0.32" aria-hidden="true">
-            <img src="assets/products/sennoplus.webp" alt="" loading="lazy">
-            <span><small>Kerusi urut</small><b>BEREX Senno Plus</b></span>
-          </div>
-
-          <div class="float float-chip float-service" data-depth="0.7" aria-hidden="true">
-            <span class="ic"><svg class="icon"><use href="#i-heart"/></svg></span>
-            <span><small>Heart Service</small><b>Servis berkala percuma</b></span>
+          <div class="id-wrap" data-depth="0.15">
+            <div class="float person-id">
+              <span class="dot"></span>
+              <span><b>Fendi</b><small>Coway Health Consultant</small></span>
+            </div>
           </div>
         </div>
-      </div>
       <div class="scroll-hint" aria-hidden="true"><i></i>Tatal</div>
     </section>
 
