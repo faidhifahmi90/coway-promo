@@ -4,76 +4,107 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Coway Malaysia · Promosi Serendah RM20 | Fendi, Coway Health Consultant</title>
-  <meta name="description" content="Penapis air, penulen udara, penghawa dingin, mesin basuh, peti sejuk, kerusi urut dan tilam BEREX. Serendah RM20 sebulan dengan penghantaran, pemasangan dan servis berkala percuma.">
+  <meta name="description" content="Semua model Coway ada RM20 untuk 3/5/7 bulan pertama, ikut model dan tempoh kontrak. Penapis air, penulen udara, penghawa dingin, mesin basuh, peti sejuk, kerusi urut dan tilam BEREX dengan penghantaran, pemasangan dan servis berkala percuma.">
   <meta name="theme-color" content="#0a1f4d">
-  <meta property="og:title" content="Coway · Semua produk serendah RM20">
-  <meta property="og:description" content="Pilih produk Coway ikut kategori, model dan bajet. WhatsApp Fendi untuk tempahan.">
+  <meta property="og:title" content="Coway · Semua model RM20 untuk 3/5/7 bulan pertama">
+  <meta property="og:description" content="RM20 sebulan untuk 3, 5 atau 7 bulan pertama, ikut model dan tempoh kontrak. WhatsApp Fendi untuk tempahan.">
   <meta property="og:image" content="assets/promo/anniversary.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/products/sennoplus.webp">
+  <link rel="preload" as="image" href="assets/fendi.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="progress" id="progress"></div>
 
-  <div class="ribbon">
-    Sambutan Ulang Tahun Coway ke-20 · <strong>Semua produk serendah RM20*</strong> · <a href="#promosi">Lihat promosi</a>
+  <div class="ribbon" id="ribbon">
+    <div class="wrap">
+      <span class="ribbon-tag">Ulang tahun ke-20</span>
+      <p><strong>Semua model ada RM20</strong> untuk 3/5/7 bulan pertama <span class="dim">· ikut model &amp; tempoh kontrak*</span></p>
+      <a href="#promosi">Lihat promosi <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="wrap">
       <a class="brand" href="#top" aria-label="Coway, ke atas">
-        <span class="wordmark">coway</span><small>Change your life</small>
+        <span class="wordmark">coway</span>
+        <span class="brand-tag">Change your life</span>
       </a>
-      <nav class="nav" aria-label="Utama">
+
+      <nav class="nav" id="nav" aria-label="Utama">
         <a href="#promosi">Promosi</a>
         <a href="#produk">Produk</a>
         <a href="#kenapa">Kenapa Coway</a>
         <a href="#bayaran">Cara Tempah</a>
+        <a href="#hubungi">Hubungi</a>
       </nav>
-      <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">
-        <svg class="icon"><use href="#i-wa"/></svg><span class="label">WhatsApp Fendi</span>
-      </a>
+
+      <div class="header-actions">
+        <a class="header-tel" data-tel href="#">
+          <svg class="icon"><use href="#i-phone"/></svg><span>011 1664 4185</span>
+        </a>
+        <a class="btn btn-wa btn-sm" data-wa href="#" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-wa"/></svg><span class="label">WhatsApp Fendi</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+          <i></i><i></i><i></i>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="wrap">
         <div class="hero-copy reveal">
           <span class="eyebrow">Coway · 20 tahun di Malaysia</span>
           <h1>Hidup lebih sihat, <em>serendah RM20</em> sebulan.</h1>
-          <p class="lead">Penapis air, penulen udara, penghawa dingin, mesin basuh, peti sejuk, kerusi urut dan tilam BEREX. Semua datang dengan penghantaran, pemasangan dan servis berkala percuma.</p>
+          <p class="lead">Semua model ada RM20 untuk <strong>3, 5 atau 7 bulan pertama</strong>, ikut model dan tempoh kontrak. Penapis air, penulen udara, penghawa dingin, mesin basuh, peti sejuk, kerusi urut dan tilam BEREX, semuanya dengan penghantaran, pemasangan dan servis berkala percuma.</p>
           <div class="hero-cta">
-            <a class="btn btn-gold" href="#promosi">Lihat promosi bulan ini</a>
-            <a class="btn btn-light" href="#produk">Semua produk</a>
+            <a class="btn btn-gold btn-lg" href="#promosi">Lihat promosi bulan ini</a>
+            <a class="btn btn-light btn-lg" href="#produk">Semua produk</a>
           </div>
-          <div class="hero-stats">
-            <div><strong id="stat-models">36</strong>model</div>
-            <div><strong>8</strong>kategori</div>
-            <div><strong>RM20</strong>serendah sebulan*</div>
-          </div>
+          <dl class="hero-stats">
+            <div><dt id="stat-models">36</dt><dd>model</dd></div>
+            <div><dt>8</dt><dd>kategori</dd></div>
+            <div><dt>3 · 5 · 7</dt><dd>bulan pertama RM20*</dd></div>
+          </dl>
         </div>
 
-        <div class="hero-stage" id="heroStage" aria-hidden="true">
-          <div class="halo"></div>
-          <div class="ring" data-depth="0.15"></div>
-          <div class="ring r2" data-depth="0.3"></div>
-          <div class="layer l-storm" data-depth="0.25"><img src="assets/products/storm2.webp" alt=""></div>
-          <div class="layer l-villaem" data-depth="0.45"><img src="assets/products/villaem3.webp" alt=""></div>
-          <div class="layer l-chair" data-depth="0.7"><img src="assets/products/sennoplus.webp" alt=""></div>
-          <div class="layer l-neon" data-depth="1"><img src="assets/products/neon.webp" alt=""></div>
-          <div class="layer l-wash" data-depth="0.85"><img src="assets/products/wd129.webp" alt=""></div>
-          <div class="price-float" data-depth="1.2">
-            <small>Serendah</small>
-            <b>RM20</b> <span>/bulan*</span>
+        <div class="hero-stage" id="heroStage">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="ring" data-depth="0.12" aria-hidden="true"></div>
+          <div class="ring r2" data-depth="0.22" aria-hidden="true"></div>
+
+          <figure class="portrait" data-depth="0.06">
+            <img src="assets/fendi.webp" alt="Fendi, Coway Health Consultant" width="853" height="1280" fetchpriority="high" decoding="async">
+            <figcaption class="portrait-id">
+              <span class="dot"></span>
+              <span><b>Fendi</b><small>Coway Health Consultant</small></span>
+            </figcaption>
+          </figure>
+
+          <div class="float float-price" data-depth="0.5" aria-hidden="true">
+            <small>Semua model</small>
+            <b>RM20</b><span>/bulan</span>
+            <em>3 · 5 · 7 bulan pertama*</em>
+          </div>
+
+          <div class="float float-chip float-product" data-depth="0.32" aria-hidden="true">
+            <img src="assets/products/sennoplus.webp" alt="" loading="lazy">
+            <span><small>Kerusi urut</small><b>BEREX Senno Plus</b></span>
+          </div>
+
+          <div class="float float-chip float-service" data-depth="0.7" aria-hidden="true">
+            <span class="ic"><svg class="icon"><use href="#i-heart"/></svg></span>
+            <span><small>Heart Service</small><b>Servis berkala percuma</b></span>
           </div>
         </div>
       </div>
-      <div class="scroll-hint"><i></i>Tatal</div>
+      <div class="scroll-hint" aria-hidden="true"><i></i>Tatal</div>
     </section>
 
     <!-- PERKS -->
@@ -92,9 +123,24 @@
         <div class="sec-head reveal">
           <div>
             <span class="eyebrow">Promosi bulan ini</span>
-            <h2>RM20 sebulan untuk<br>bulan-bulan pertama.</h2>
+            <h2>Semua model, RM20 untuk<br>bulan-bulan pertama.</h2>
           </div>
-          <p>Bayar hanya RM20 sebulan untuk 5 atau 7 bulan pertama, kemudian harga sewaan biasa. Leret untuk lihat semua tawaran.</p>
+          <p>Bayar hanya RM20 sebulan untuk 3, 5 atau 7 bulan pertama, ikut model dan tempoh kontrak yang dipilih. Selepas itu, harga sewaan biasa.</p>
+        </div>
+
+        <div class="tiers reveal" role="list" aria-label="Tempoh promosi RM20">
+          <div class="tier" role="listitem"><small>Tempoh promosi</small><b>3<span>bulan</span></b><p>RM20/bulan untuk 3 bulan pertama</p></div>
+          <div class="tier" role="listitem"><small>Tempoh promosi</small><b>5<span>bulan</span></b><p>RM20/bulan untuk 5 bulan pertama</p></div>
+          <div class="tier" role="listitem"><small>Tempoh promosi</small><b>7<span>bulan</span></b><p>RM20/bulan untuk 7 bulan pertama</p></div>
+          <div class="tier tier-note" role="listitem">
+            <span class="ic"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <p><b>Ikut model &amp; tempoh kontrak.</b> Tempoh promosi berbeza antara model dan pelan 3+2, 5+0 atau 7+0. Fendi akan sahkan tempoh tepat untuk pilihan anda.</p>
+          </div>
+        </div>
+
+        <div class="sub-head reveal">
+          <h3>Tawaran pilihan</h3>
+          <span>Leret untuk lihat semua</span>
         </div>
         <div class="promo-track reveal" id="promoTrack"></div>
       </div>
@@ -108,7 +154,7 @@
             <span class="eyebrow">Katalog produk</span>
             <h2>Pilih ikut kategori,<br>model & bajet.</h2>
           </div>
-          <p>Harga sewaan bulanan paling rendah bagi setiap model. Tekan mana-mana produk untuk pelan sewaan penuh, harga tunai dan spesifikasi.</p>
+          <p>Harga sewaan bulanan paling rendah bagi setiap model. Setiap model layak RM20 untuk 3, 5 atau 7 bulan pertama. Tekan produk untuk pelan sewaan penuh, harga tunai dan spesifikasi.</p>
         </div>
       </div>
 
@@ -178,7 +224,7 @@
             <h3>Langkah tempahan</h3>
             <ol class="steps">
               <li><div><b>Pilih produk</b><span>Tekan "WhatsApp" pada produk pilihan. Mesej akan diisi automatik dengan nama & model.</span></div></li>
-              <li><div><b>Sahkan pelan</b><span>Fendi akan bantu pilih tempoh (3+2, 5+0, 7+0), kekerapan servis dan semak kelayakan.</span></div></li>
+              <li><div><b>Sahkan pelan</b><span>Fendi akan bantu pilih tempoh (3+2, 5+0, 7+0), sahkan tempoh promosi RM20 untuk model anda, kekerapan servis dan semak kelayakan.</span></div></li>
               <li><div><b>Hantar & pasang</b><span>Produk dihantar dan dipasang percuma. Heart Service bermula mengikut jadual.</span></div></li>
             </ol>
           </div>
@@ -200,17 +246,23 @@
     <section class="contact" id="hubungi">
       <div class="wrap">
         <div class="contact-card reveal">
-          <div>
+          <div class="contact-copy">
             <span class="eyebrow">Sedia untuk mula?</span>
             <h2>Tanya apa sahaja, kami bantu pilih yang sesuai.</h2>
-            <p>Tak pasti model mana sesuai dengan rumah atau bajet anda? WhatsApp sekarang untuk cadangan, semakan promosi dan tempahan.</p>
-            <a class="btn btn-gold" href="#produk">Terus ke katalog</a>
+            <p>Tak pasti model mana sesuai dengan rumah atau bajet anda? WhatsApp sekarang untuk cadangan, semakan tempoh promosi RM20 dan tempahan.</p>
+            <a class="btn btn-gold btn-lg" href="#produk">Terus ke katalog</a>
           </div>
           <div class="agent">
-            <small>Untuk maklumat lanjut, sila hubungi</small>
+            <div class="agent-head">
+              <img class="avatar" src="assets/fendi-avatar.webp" alt="" width="72" height="72" loading="lazy">
+              <div>
+                <small>Coway Health Consultant</small>
+                <div class="who">Fendi</div>
+              </div>
+            </div>
             <a class="phone" data-tel href="#">011 1664 4185</a>
-            <div class="who">Fendi <span>· Coway Health Consultant</span></div>
             <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp sekarang</a>
+            <span class="agent-note">Balas pantas pada waktu pejabat, 7 hari seminggu.</span>
           </div>
         </div>
       </div>
@@ -219,7 +271,7 @@
 
   <footer>
     <div class="wrap">
-      <div>*Tertakluk pada terma dan syarat. Sementara masih ada. Tempoh dan harga promosi RM20 berbeza mengikut produk; sila sahkan dengan Coway Health Consultant.</div>
+      <div>*Semua model ada RM20 untuk 3/5/7 bulan pertama ikut model dan tempoh kontrak. Tertakluk pada terma dan syarat, sementara masih ada. Sila sahkan tempoh promosi dengan Coway Health Consultant.</div>
       <div>Harga dalam Ringgit Malaysia dan tertakluk kepada SST jika berkenaan. Maklumat harga & spesifikasi berdasarkan Coway Complete Product Catalogue (September–Oktober 2026) dan boleh berubah tanpa notis. Gambar untuk tujuan ilustrasi sahaja.</div>
     </div>
   </footer>
@@ -250,6 +302,7 @@
       <symbol id="i-chair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3c2 0 3 1 3.5 3l2 7h5.5a2 2 0 0 1 2 2v2H11L7 9.5"/><path d="M8 20h11M12 17v3"/></symbol>
       <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V6M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11" r="2"/></symbol>
       <symbol id="i-bidet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h14a7 7 0 0 1-7 7 7 7 0 0 1-7-7zM6 3h5v7H6zM9 17l-1 4h8l-1-4"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     </defs>
   </svg>

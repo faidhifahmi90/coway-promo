@@ -1,5 +1,5 @@
 (() => {
-  const { contact, categories, products } = window.COWAY;
+  const { contact, offer, categories, products } = window.COWAY;
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -12,12 +12,34 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const icon = (id) => `<svg class="icon"><use href="#i-${id}"/></svg>`;
   const wa = (text) => `https://wa.me/${contact.wa}?text=${encodeURIComponent(text)}`;
-  const waFor = (p) => wa(`Hi ${contact.name}, saya berminat dengan Coway ${p.name} (${p.model}), dari ${rm(p.from)}/bulan. Boleh kongsi maklumat & promosi terkini?`);
+  const waFor = (p) => wa(`Hi ${contact.name}, saya berminat dengan Coway ${p.name} (${p.model}), dari ${rm(p.from)}/bulan. Boleh sahkan tempoh promosi RM20 & maklumat terkini?`);
+  const offerMonths = offer.months.join("/");
 
   // ---------- global contact links ----------
-  $$("[data-wa]").forEach((a) => (a.href = wa(`Hi ${contact.name}, saya berminat dengan produk Coway. Boleh terangkan promosi serendah RM20?`)));
+  $$("[data-wa]").forEach((a) => (a.href = wa(`Hi ${contact.name}, saya berminat dengan produk Coway. Boleh terangkan promosi RM20 untuk ${offerMonths} bulan pertama?`)));
   $$("[data-tel]").forEach((a) => (a.href = "tel:+" + contact.wa));
   $("#stat-models").textContent = products.length;
+
+  // ---------- header ----------
+  const header = $("#header"), nav = $("#nav"), menuToggle = $("#menuToggle");
+  const setMenu = (open) => {
+    header.classList.toggle("menu-open", open);
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+  };
+  menuToggle.addEventListener("click", () => setMenu(!header.classList.contains("menu-open")));
+  nav.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("click", (e) => { if (!e.target.closest("#header")) setMenu(false); });
+
+  const navLinks = $$("a[href^='#']", nav);
+  const spyTargets = navLinks.map((a) => $(a.getAttribute("href"))).filter(Boolean);
+  function spy() {
+    const line = scrollY + innerHeight * 0.35;
+    let current = null;
+    for (const sec of spyTargets) if (sec.offsetTop <= line) current = sec;
+    navLinks.forEach((a) => a.classList.toggle("is-active", !!current && a.getAttribute("href") === "#" + current.id));
+  }
 
   // ---------- promo track ----------
   const promoOrder = ["sennoplus", "primelite", "wd129", "fridge715", "pseries", "neon", "storm2"];
@@ -82,12 +104,14 @@
 
   function card(p) {
     const badges = [
-      p.promo ? `<span class="badge gold">Promo RM20</span>` : "",
+      `<span class="badge gold">${p.promo ? `RM20 × ${p.promo.months} bulan` : "Promo RM20"}</span>`,
       p.isNew ? `<span class="badge blue">Baharu</span>` : "",
     ].join("");
     const sw = p.colors ? `<div class="swatches" title="${p.colors.length} warna">${p.colors.map(([n, c]) => `<i style="background:${c}" title="${esc(n)}"></i>`).join("")}</div>` : "";
     const cash = p.outright ? `<div class="cash">Tunai dari<b>${rm(Math.min(...p.outright.map((o) => o[1])))}</b></div>` : `<div class="cash">Sewaan<b>sahaja</b></div>`;
-    const promo = p.promo ? `<div class="promo-strip"><span><b>RM20</b> × ${p.promo.months} bulan pertama</span><span>kemudian ${rm(p.promo.after)}</span></div>` : "";
+    const promo = p.promo
+      ? `<div class="promo-strip"><span><b>${rm(p.promo.intro)}</b> × ${p.promo.months} bulan pertama</span><span>kemudian ${p.promo.afterAlt ? esc(p.promo.afterAlt) : rm(p.promo.after)}</span></div>`
+      : `<div class="promo-strip"><span><b>${rm(offer.intro)}</b> × ${offerMonths} bulan pertama</span><span class="hint">${esc(offer.detail)}</span></div>`;
     return `
       <article class="card reveal" data-id="${p.id}">
         <button class="stage" data-open="${p.id}" aria-label="Butiran ${esc(p.name)}">
@@ -122,7 +146,6 @@
         if (!items.length) return "";
         const all = products.filter((p) => p.cat === c.id);
         const minFrom = Math.min(...all.map((p) => p.from));
-        const promoCount = all.filter((p) => p.promo).length;
         const groups = Object.entries(c.groups)
           .map(([gid, gname]) => {
             const gi = items.filter((p) => p.group === gid).sort(sorter[state.sort]);
@@ -146,7 +169,7 @@
                 <div class="meta">
                   <span class="pill gold">Dari ${rm(minFrom)}/bulan</span>
                   <span class="pill">${all.length} model</span>
-                  ${promoCount ? `<span class="pill">${promoCount} promo RM20</span>` : ""}
+                  <span class="pill">RM20 · ${offerMonths} bulan pertama</span>
                 </div>
               </div>
             </div>
@@ -208,6 +231,14 @@
           <div class="bar"><i style="flex:${months}"></i><i style="flex:${12 - months}"></i></div>
           <div class="legend"><span>Bulan 1–${months}: ${rm(intro)}</span><span>Bulan ${months + 1}–12: ${rm(after)}</span></div>
           <div class="save">Anggaran 12 bulan pertama ${rm(first)}, jimat ${rm(save)} berbanding harga biasa.</div>
+        </div>`;
+    } else {
+      calc = `
+        <div class="calc">
+          <div class="top"><b>${rm(offer.intro)}</b><span>/bulan untuk bulan-bulan pertama, ${esc(offer.detail)}</span></div>
+          <div class="months">${offer.months.map((m) => `<span><b>${m}</b>bulan</span>`).join("")}</div>
+          <div class="legend"><span>Tempoh promosi bergantung pada pelan 3+2, 5+0 atau 7+0.</span></div>
+          <div class="save">${esc(contact.name)} akan sahkan tempoh RM20 yang tepat untuk model ini.</div>
         </div>`;
     }
     const plans = p.plans || [];
@@ -296,13 +327,15 @@
     const vh = innerHeight;
     const max = document.documentElement.scrollHeight - vh;
     $("#progress").style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    header.classList.toggle("is-scrolled", scrollY > 8);
+    spy();
     if (reduceMotion) return;
     pointer.x += (pointer.tx - pointer.x) * 0.08;
     pointer.y += (pointer.ty - pointer.y) * 0.08;
     if (scrollY < vh * 1.2) {
       heroLayers.forEach((el) => {
         const d = parseFloat(el.dataset.depth);
-        el.style.transform = `translate3d(${pointer.x * d * 22}px, ${pointer.y * d * 16 - scrollY * d * 0.22}px, 0)`;
+        el.style.transform = `translate3d(${pointer.x * d * 26}px, ${pointer.y * d * 18 - scrollY * d * 0.25}px, 0)`;
       });
     }
     banners.forEach((el) => {
@@ -348,6 +381,7 @@
   renderChips();
   renderCatalog();
   observeReveals();
+  spy();
   const deep = location.hash.match(/^#p-([\w-]+)/);
   if (deep && byId[deep[1]]) openProduct(deep[1]);
 })();
