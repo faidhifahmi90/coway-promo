@@ -9,6 +9,18 @@ window.COWAY = {
     title: "Coway Health Consultant",
     phone: "011 1664 4185",
     wa: "601116644185",
+    photo: "assets/fendi.webp",
+    avatar: "assets/fendi-avatar.webp",
+  },
+
+  // Site-wide promo: every model gets RM20/month for the first 3, 5 or 7 months,
+  // depending on the model and the contract tenure. Models with a poster carry
+  // exact terms in `promo` below; the rest fall back to this.
+  offer: {
+    intro: 20,
+    months: [3, 5, 7],
+    headline: "Semua model ada RM20 untuk 3/5/7 bulan pertama",
+    detail: "ikut model dan tempoh kontrak",
   },
 
   categories: [
