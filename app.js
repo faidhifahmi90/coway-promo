@@ -103,15 +103,10 @@
   };
 
   function card(p) {
-    const badges = [
-      `<span class="badge gold">${p.promo ? `RM20 × ${p.promo.months} bulan` : "Promo RM20"}</span>`,
-      p.isNew ? `<span class="badge blue">Baharu</span>` : "",
-    ].join("");
+    const badges = p.isNew ? `<span class="badge blue">Baharu</span>` : "";
     const sw = p.colors ? `<div class="swatches" title="${p.colors.length} warna">${p.colors.map(([n, c]) => `<i style="background:${c}" title="${esc(n)}"></i>`).join("")}</div>` : "";
     const cash = p.outright ? `<div class="cash">Tunai dari<b>${rm(Math.min(...p.outright.map((o) => o[1])))}</b></div>` : `<div class="cash">Sewaan<b>sahaja</b></div>`;
-    const promo = p.promo
-      ? `<div class="promo-strip"><span><b>${rm(p.promo.intro)}</b> × ${p.promo.months} bulan pertama</span><span>kemudian ${p.promo.afterAlt ? esc(p.promo.afterAlt) : rm(p.promo.after)}</span></div>`
-      : `<div class="promo-strip"><span><b>${rm(offer.intro)}</b> × ${offerMonths} bulan pertama</span><span class="hint">${esc(offer.detail)}</span></div>`;
+
     return `
       <article class="card reveal" data-id="${p.id}">
         <button class="stage" data-open="${p.id}" aria-label="Butiran ${esc(p.name)}">
@@ -127,7 +122,6 @@
             <div><span class="from">Sewa dari</span><strong>${rm(p.from)}<small>/bulan</small></strong></div>
             ${cash}
           </div>
-          ${promo}
           <div class="actions">
             <button class="btn btn-ghost" data-open="${p.id}">Butiran</button>
             <a class="btn btn-wa" href="${waFor(p)}" target="_blank" rel="noopener">${icon("wa")}WhatsApp</a>
@@ -169,7 +163,6 @@
                 <div class="meta">
                   <span class="pill gold">Dari ${rm(minFrom)}/bulan</span>
                   <span class="pill">${all.length} model</span>
-                  <span class="pill">RM20 · ${offerMonths} bulan pertama</span>
                 </div>
               </div>
             </div>
@@ -197,7 +190,7 @@
     const b = e.target.closest("[data-budget]");
     if (b) { state.budget = b.dataset.budget; renderChips(); renderCatalog(); return; }
     const o = e.target.closest("[data-open]");
-    if (o) { openProduct(o.dataset.open); return; }
+    if (o) { openProduct(o.dataset.open, !!o.closest("#promoTrack")); return; }
     const ps = e.target.closest("[data-poster]");
     if (ps) { openPoster(ps.dataset.poster); return; }
   });
@@ -216,12 +209,12 @@
 
   // ---------- product modal ----------
   const modal = $("#modal");
-  function openProduct(id) {
+  function openProduct(id, showPromo = false) {
     const p = byId[id];
     if (!p) return;
     const c = catById[p.cat];
     let calc = "";
-    if (p.promo) {
+    if (showPromo && p.promo) {
       const { intro, months, after, afterAlt } = p.promo;
       const first = intro * months + after * (12 - months);
       const save = after * 12 - first;
@@ -231,14 +224,6 @@
           <div class="bar"><i style="flex:${months}"></i><i style="flex:${12 - months}"></i></div>
           <div class="legend"><span>Bulan 1–${months}: ${rm(intro)}</span><span>Bulan ${months + 1}–12: ${rm(after)}</span></div>
           <div class="save">Anggaran 12 bulan pertama ${rm(first)}, jimat ${rm(save)} berbanding harga biasa.</div>
-        </div>`;
-    } else {
-      calc = `
-        <div class="calc">
-          <div class="top"><b>${rm(offer.intro)}</b><span>/bulan untuk bulan-bulan pertama, ${esc(offer.detail)}</span></div>
-          <div class="months">${offer.months.map((m) => `<span><b>${m}</b>bulan</span>`).join("")}</div>
-          <div class="legend"><span>Tempoh promosi bergantung pada pelan 3+2, 5+0 atau 7+0.</span></div>
-          <div class="save">${esc(contact.name)} akan sahkan tempoh RM20 yang tepat untuk model ini.</div>
         </div>`;
     }
     const plans = p.plans || [];
