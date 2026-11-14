@@ -11,31 +11,22 @@
   <meta property="og:image" content="assets/promo/anniversary.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/fendi.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/products/sennoplus.webp">
+  <link rel="preload" as="image" href="assets/coway-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="progress" id="progress"></div>
 
-  <div class="ribbon" id="ribbon">
-    <div class="wrap">
-      <span class="ribbon-tag">Ulang tahun ke-20</span>
-      <p><strong>Semua model ada RM20</strong> untuk 3/5/7 bulan pertama <span class="dim">· ikut model &amp; tempoh kontrak*</span></p>
-      <a href="#promosi">Lihat promosi <svg class="icon"><use href="#i-arrow"/></svg></a>
-    </div>
-  </div>
-
   <header class="header" id="header">
     <div class="wrap">
       <a class="brand" href="#top" aria-label="Coway, kembali ke atas">
-        <span class="wordmark">coway</span>
-        <span class="brand-tag">Change your life</span>
+        <img src="assets/coway-logo.png" alt="Coway" width="103" height="24" decoding="async">
       </a>
 
       <nav class="nav" id="nav" aria-label="Utama">
-        <a href="#promosi">Promosi</a>
+        <a class="nav-hi" href="#promosi">Promosi RM20</a>
         <a href="#produk">Produk</a>
         <a href="#kenapa">Kenapa Coway</a>
         <a href="#bayaran">Cara Tempahan</a>
@@ -43,11 +34,11 @@
       </nav>
 
       <div class="header-actions">
-        <a class="header-tel" data-tel href="#">
+        <a class="header-tel" data-tel href="#" aria-label="Telefon Fendi">
           <svg class="icon"><use href="#i-phone"/></svg><span>011 1664 4185</span>
         </a>
-        <a class="btn btn-wa btn-sm" data-wa href="#" target="_blank" rel="noopener">
-          <svg class="icon"><use href="#i-wa"/></svg><span class="label">WhatsApp Fendi</span>
+        <a class="header-wa" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp Fendi">
+          <svg class="icon"><use href="#i-wa"/></svg><span class="label">WhatsApp</span>
         </a>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
           <i></i><i></i><i></i>
@@ -57,52 +48,126 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="wrap">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">Coway · 20 tahun di Malaysia</span>
-          <h1>Hidup lebih sihat, <em>serendah RM20</em> sebulan.</h1>
-          <p class="lead">Semua model ada RM20 untuk <strong>3, 5 atau 7 bulan pertama</strong>, ikut model dan tempoh kontrak. Penapis air, penulen udara, penghawa dingin, mesin basuh, peti sejuk, kerusi urut dan tilam BEREX, semuanya dengan penghantaran, pemasangan dan servis berkala percuma.</p>
-          <div class="hero-cta">
-            <a class="btn btn-gold btn-lg" href="#promosi">Lihat promosi bulan ini</a>
-            <a class="btn btn-light btn-lg" href="#produk">Semua produk</a>
-          </div>
-          <dl class="hero-stats">
-            <div><dt id="stat-models">39</dt><dd>model</dd></div>
-            <div><dt>8</dt><dd>kategori</dd></div>
-            <div><dt>3 · 5 · 7</dt><dd>bulan pertama RM20*</dd></div>
-          </dl>
-        </div>
+    <!-- HERO: full-bleed slider in the coway.com.my style -->
+    <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Promosi utama">
+      <div class="slides" id="slides">
 
-        <div class="hero-stage" id="heroStage">
-          <div class="halo" aria-hidden="true"></div>
-          <div class="ring" data-depth="0.12" aria-hidden="true"></div>
-          <div class="ring r2" data-depth="0.22" aria-hidden="true"></div>
-          <div class="floor" aria-hidden="true"></div>
-
-          <div class="layer l-storm" data-depth="0.25" aria-hidden="true"><img src="assets/products/storm2.webp" alt="" loading="lazy"></div>
-          <div class="layer l-chair" data-depth="0.3" aria-hidden="true"><img src="assets/products/sennoplus.webp" alt="" loading="lazy"></div>
-          <div class="layer l-wash" data-depth="0.35" aria-hidden="true"><img src="assets/products/wd129.webp" alt="" loading="lazy"></div>
-          <div class="layer l-person" data-depth="0.1">
-            <img src="assets/fendi.webp" alt="Fendi, Coway Health Consultant" width="387" height="1106" fetchpriority="high" decoding="async">
-          </div>
-          <div class="layer l-villaem" data-depth="0.6" aria-hidden="true"><img src="assets/products/villaem3.webp" alt="" loading="lazy"></div>
-          <div class="layer l-neon" data-depth="0.8" aria-hidden="true"><img src="assets/products/neon.webp" alt="" loading="lazy"></div>
-
-          <div class="float float-price" data-depth="1" aria-hidden="true">
-            <small>Semua model</small>
-            <b>RM20</b><span>/bulan</span>
-            <em>3 · 5 · 7 bulan pertama*</em>
-          </div>
-          <div class="id-wrap" data-depth="0.15">
-            <div class="float person-id">
-              <span class="dot"></span>
-              <span><b>Fendi</b><small>Coway Health Consultant</small></span>
+        <!-- 1 · RM20 campaign -->
+        <article class="slide light is-active" data-slide="promo" aria-roledescription="slide" aria-label="1 daripada 5">
+          <div class="wrap slide-grid">
+            <div class="slide-copy">
+              <p class="eyebrow">Ulang tahun ke-20 · Semua model</p>
+              <h1>Hidup lebih sihat,<br>serendah <span class="hl">RM20</span> sebulan.</h1>
+              <p class="lead">RM20/bulan untuk <strong>3, 5 atau 7 bulan pertama</strong>, ikut model dan tempoh kontrak. Penghantaran, pemasangan dan servis berkala percuma.</p>
+              <div class="slide-cta">
+                <a class="hbtn hbtn-solid" href="#promosi">Lihat promosi</a>
+                <a class="hbtn" href="#produk">Semua produk</a>
+              </div>
+              <p class="slide-meta"><b id="stat-models">39</b> model · <b>8</b> kategori · <b>3 · 5 · 7</b> bulan pertama RM20*</p>
+            </div>
+            <div class="slide-media hero-stage" id="heroStage">
+              <div class="floor" aria-hidden="true"></div>
+              <div class="layer l-storm" data-depth="0.25" aria-hidden="true"><img src="assets/products/storm2.webp" alt="" loading="lazy"></div>
+              <div class="layer l-chair" data-depth="0.3" aria-hidden="true"><img src="assets/products/sennoplus.webp" alt="" loading="lazy"></div>
+              <div class="layer l-wash" data-depth="0.35" aria-hidden="true"><img src="assets/products/wd129.webp" alt="" loading="lazy"></div>
+              <div class="layer l-person" data-depth="0.1">
+                <img src="assets/fendi.webp" alt="Fendi, Coway Health Consultant" width="387" height="1106" fetchpriority="high" decoding="async">
+              </div>
+              <div class="layer l-villaem" data-depth="0.6" aria-hidden="true"><img src="assets/products/villaem3.webp" alt="" loading="lazy"></div>
+              <div class="layer l-neon" data-depth="0.8" aria-hidden="true"><img src="assets/products/neon.webp" alt="" loading="lazy"></div>
+              <div class="float float-price" data-depth="1" aria-hidden="true">
+                <small>Semua model</small>
+                <b>RM20</b><span>/bulan</span>
+                <em>3 · 5 · 7 bulan pertama*</em>
+              </div>
+              <div class="id-wrap" data-depth="0.15">
+                <div class="float person-id">
+                  <span class="dot"></span>
+                  <span><b>Fendi</b><small>Coway Health Consultant</small></span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      <div class="scroll-hint" aria-hidden="true"><i></i>Skrol</div>
+        </article>
+
+        <!-- 2 · Icon Ice -->
+        <article class="slide light media-left" data-slide="iconice" aria-roledescription="slide" aria-label="2 daripada 5">
+          <div class="wrap slide-grid">
+            <div class="slide-media">
+              <img class="product" src="assets/products/iconice.webp" alt="Coway Icon Ice" loading="lazy" decoding="async">
+            </div>
+            <div class="slide-copy">
+              <p class="eyebrow">Baharu · Penapis air &amp; pembuat ais</p>
+              <h2>Icon Ice</h2>
+              <p class="model">CHPI-7410N</p>
+              <p class="tagline">Direka untuk<br><strong>ikon dalam diri anda.</strong></p>
+              <p class="lead">Ais 1.1kg siap dalam 12 minit, sterilisasi UV 7 peringkat dan penapisan Nanotrap™ — semuanya dalam satu unit atas meja.</p>
+              <div class="slide-cta">
+                <button class="hbtn" data-open="iconice">Lihat produk</button>
+                <span class="price-tag">Dari <b>RM139</b>/bulan · RM20 × bulan pertama*</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 · BEREX Elite -->
+        <article class="slide dark" data-slide="elite" aria-roledescription="slide" aria-label="3 daripada 5">
+          <div class="wrap slide-grid">
+            <div class="slide-copy">
+              <p class="eyebrow">Baharu · BEREX Elite Series Mattress</p>
+              <h2>Bukan berapa lama anda tidur,<br>tapi sebaik mana.</h2>
+              <p class="lead">Pocket spring & lateks asli 9 zon, teknologi Sanitized® dan plush top premium 360mm. Topper boleh ditukar percuma untuk pelanggan sewaan.</p>
+              <div class="slide-cta">
+                <button class="hbtn" data-open="elite">Lihat produk</button>
+                <span class="price-tag">Dari <b>RM89</b>/bulan · RM20 × bulan pertama*</span>
+              </div>
+            </div>
+            <div class="slide-media">
+              <img class="product wide" src="assets/products/elite.webp" alt="Tilam BEREX Elite dengan rangka katil" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 · Washer Dryer 12/9 -->
+        <article class="slide dark teal media-left" data-slide="wd129" aria-roledescription="slide" aria-label="4 daripada 5">
+          <div class="wrap slide-grid">
+            <div class="slide-media">
+              <img class="product" src="assets/products/wd129.webp" alt="Coway Washer Dryer 12/9KG" loading="lazy" decoding="async">
+            </div>
+            <div class="slide-copy">
+              <p class="eyebrow">Baharu · Washer Dryer 12/9KG</p>
+              <h2>Naik taraf lengkap<br>untuk dobi anda.</h2>
+              <p class="lead">Basuh 12kg dan kering 9kg dalam satu mesin, dengan 6-Sense AI Wash, MicroBubble™ dan dos detergen automatik.</p>
+              <div class="slide-cta">
+                <button class="hbtn" data-open="wd129">Lihat produk</button>
+                <span class="price-tag"><b>RM20</b>/bulan × 7 bulan pertama, kemudian RM89*</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 · Senno Plus -->
+        <article class="slide dark" data-slide="sennoplus" aria-roledescription="slide" aria-label="5 daripada 5">
+          <div class="wrap slide-grid">
+            <div class="slide-copy">
+              <p class="eyebrow">BEREX Senno Plus Massage Chair</p>
+              <h2>Cas semula<br>untuk hari-hari anda.</h2>
+              <p class="lead">AI Health Scan dengan 20 program, urutan 4D dengan 44 beg udara dan regangan buku lali 140°. Pemulihan, direka untuk cara anda hidup.</p>
+              <div class="slide-cta">
+                <button class="hbtn" data-open="sennoplus">Lihat produk</button>
+                <span class="price-tag"><b>RM20</b>/bulan × 5 bulan pertama, kemudian RM165*</span>
+              </div>
+            </div>
+            <div class="slide-media">
+              <img class="product" src="assets/products/sennoplus.webp" alt="Kerusi urut BEREX Senno Plus" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="hero-arrow prev" id="heroPrev" aria-label="Slaid sebelumnya"><svg viewBox="0 0 24 48" aria-hidden="true"><path d="M20 2 4 24l16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="hero-arrow next" id="heroNext" aria-label="Slaid seterusnya"><svg viewBox="0 0 24 48" aria-hidden="true"><path d="m4 2 16 22L4 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Pilih slaid"></div>
     </section>
 
     <!-- PERKS -->

@@ -298,6 +298,43 @@
     });
   }
 
+  // ---------- hero slider (coway.com.my home-slider behaviour: autoplay, arrows, dots, swipe, keys) ----------
+  const hero = $("#hero"), slides = $$(".slide", hero), dotsWrap = $("#heroDots");
+  const HERO_INTERVAL = 6500;
+  hero.style.setProperty("--hero-interval", HERO_INTERVAL + "ms");
+  let cur = 0, timer = null;
+  dotsWrap.innerHTML = slides.map((s, i) => `<button type="button" role="tab" aria-label="Slaid ${i + 1}: ${esc(s.dataset.slide)}" aria-selected="${i === 0}"></button>`).join("");
+  const dots = $$("button", dotsWrap);
+  function show(i) {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle("is-active", k === cur); s.setAttribute("aria-hidden", k !== cur); });
+    dots.forEach((d, k) => d.setAttribute("aria-selected", k === cur));
+    hero.classList.toggle("on-dark", slides[cur].classList.contains("dark"));
+    restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    if (reduceMotion) return;
+    timer = setInterval(() => { if (!hero.classList.contains("is-paused") && !document.hidden) show(cur + 1); }, HERO_INTERVAL);
+  }
+  $("#heroPrev").addEventListener("click", () => show(cur - 1));
+  $("#heroNext").addEventListener("click", () => show(cur + 1));
+  dots.forEach((d, k) => d.addEventListener("click", () => show(k)));
+  hero.addEventListener("pointerenter", () => hero.classList.add("is-paused"));
+  hero.addEventListener("pointerleave", () => hero.classList.remove("is-paused"));
+  hero.addEventListener("focusin", () => hero.classList.add("is-paused"));
+  hero.addEventListener("focusout", () => hero.classList.remove("is-paused"));
+  hero.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") show(cur - 1); if (e.key === "ArrowRight") show(cur + 1); });
+  let sx = 0, sy = 0, swiping = false;
+  hero.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiping = true; }, { passive: true });
+  hero.addEventListener("touchend", (e) => {
+    if (!swiping) return; swiping = false;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) show(cur + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) restart(); });
+  show(0);
+
   // ---------- parallax ----------
   let banners = [], texts = [];
   const heroLayers = $$("#heroStage [data-depth]");
@@ -317,7 +354,7 @@
     if (reduceMotion) return;
     pointer.x += (pointer.tx - pointer.x) * 0.08;
     pointer.y += (pointer.ty - pointer.y) * 0.08;
-    if (scrollY < vh * 1.2) {
+    if (scrollY < vh * 1.2 && slides[cur].contains(heroLayers[0])) {
       heroLayers.forEach((el) => {
         const d = parseFloat(el.dataset.depth);
         el.style.transform = `translate3d(${pointer.x * d * 26}px, ${pointer.y * d * 18 - scrollY * d * 0.25}px, 0)`;
