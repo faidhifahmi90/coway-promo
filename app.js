@@ -190,7 +190,7 @@
     const b = e.target.closest("[data-budget]");
     if (b) { state.budget = b.dataset.budget; renderChips(); renderCatalog(); return; }
     const o = e.target.closest("[data-open]");
-    if (o) { openProduct(o.dataset.open, !!o.closest("#promoTrack")); return; }
+    if (o) { openProduct(o.dataset.open, !!o.closest("#promoTrack, #hero")); return; }
     const ps = e.target.closest("[data-poster]");
     if (ps) { openPoster(ps.dataset.poster); return; }
   });
