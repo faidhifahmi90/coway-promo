@@ -34,7 +34,7 @@ window.COWAY = {
     {
       id: "air", name: "Penulen Udara", en: "Air Purifier", icon: "wind",
       tagline: "Udara lebih bersih, hidup lebih sihat.",
-      blurb: "Tapisan HEPA, liputan sehingga 116m² dan Air Matching Filter Programme yang dipadankan dengan rumah anda.",
+      blurb: "Penapisan HEPA, liputan sehingga 116m² dan Air Matching Filter Programme yang dipadankan dengan rumah anda.",
       image: "assets/life/air.webp",
       groups: { purifier: "Penulen Udara" },
     },
@@ -47,10 +47,10 @@ window.COWAY = {
     },
     {
       id: "laundry", name: "Mesin Basuh", en: "Laundry Care", icon: "wash",
-      tagline: "Cuci besar, kering pun besar.",
+      tagline: "Basuh banyak, kering sekali gus.",
       blurb: "Motor inverter, 6-Sense AI Wash dan Heart Service 7 langkah setiap 6 bulan.",
       image: "assets/life/laundry.webp",
-      groups: { laundry: "Pencuci & Pengering" },
+      groups: { laundry: "Mesin Basuh & Pengering" },
     },
     {
       id: "fridge", name: "Peti Sejuk", en: "Refrigerator", icon: "fridge",
@@ -69,7 +69,7 @@ window.COWAY = {
     {
       id: "sleep", name: "Tilam BEREX", en: "BEREX Mattress", icon: "bed",
       tagline: "Tidur lebih baik, hidup lebih sihat.",
-      blurb: "Pocket spring berzon, topper boleh tukar dan 7-Step Mattress Care Service setiap 4 bulan.",
+      blurb: "Pocket spring berzon, topper boleh ditukar dan 7-Step Mattress Care Service setiap 4 bulan.",
       image: "assets/life/sleep.webp",
       groups: { classic: "Tilam Pocket Spring", smart: "Tilam Pintar" },
     },
@@ -97,7 +97,7 @@ window.COWAY = {
       id: "neon", cat: "water", group: "tabletop", name: "NeoN", model: "CHP-6210N", from: 54,
       img: "assets/products/neon.webp", poster: "assets/promo/neon.webp",
       promo: { intro: 20, months: 7, after: 59 },
-      bullets: ["3 suhu air: panas, sejuk & bilik", "Penapisan Coway Nanotrap™", "Panel sentuh dengan kunci keselamatan"],
+      bullets: ["3 suhu air: panas, sejuk & suhu bilik", "Penapisan Coway Nanotrap™", "Panel sentuh dengan kunci keselamatan"],
       colors: [["Porcelain White", "#f2f1ee"], ["Peach Pink", "#f3c9c4"], ["Mint Green", "#c9dccb"], ["Ciel Blue", "#c6d8e6"], ["Pebble Gray", "#2c2d30"]],
       specs: { "Kitaran servis": "4 bulan", "Penapisan": "Coway Nanotrap™", "Tangki": "Panas 1.0L · Biasa Direct Flow · Sejuk 1.5L", "Dimensi": "195 × 450 × 405 mm" },
       plans: [
@@ -129,7 +129,7 @@ window.COWAY = {
     {
       id: "villaem3", cat: "water", group: "tabletop", name: "Villaem III", model: "CHP-7320L", from: 74,
       img: "assets/products/villaem3.webp",
-      bullets: ["Panel satu sentuh untuk semua fungsi", "48 tetapan suhu & isipadu", "Tangki panas 2.7L dengan sterilisasi UV"],
+      bullets: ["Panel satu sentuhan untuk semua fungsi", "48 tetapan suhu & isipadu", "Tangki panas 2.7L dengan sterilisasi UV"],
       colors: [["Pebble Gray", "#2c2d30"], ["Porcelain White", "#f2f1ee"]],
       specs: { "Kitaran servis": "2 / 4 bulan", "Penapisan": "Reverse Osmosis · 6 langkah + UV", "Tangki": "Panas 2.7L · Biasa 6.1L · Sejuk 2.6L", "Dimensi": "310 × 523 × 520 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 131.44, 117.66], ["3+2", "4 bulan", 120.84, 108.12], ["5+0", "2 bulan", 104, 93], ["5+0", "4 bulan", 94, 84], ["7+0", "2 bulan", 84, 75], ["7+0", "4 bulan", 74, 66]]]],
@@ -138,7 +138,7 @@ window.COWAY = {
     {
       id: "glaze", cat: "water", group: "tabletop", name: "Glaze", model: "CHP-6310L", from: 75,
       img: "assets/products/glaze.webp",
-      bullets: ["Cold Water+ untuk kesejukan konsisten", "Pengeluaran air satu sentuh", "Kawalan isipadu 120, 250 & 500ml"],
+      bullets: ["Cold Water+ untuk kesejukan konsisten", "Keluarkan air dengan satu sentuhan", "Kawalan isipadu 120, 250 & 500ml"],
       specs: { "Kitaran servis": "2 / 4 bulan", "Penapisan": "Reverse Osmosis", "Tangki": "Panas 1.0L · Biasa 2.5L · Sejuk 2.5L", "Dimensi": "260 × 483 × 510 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 132.5, 118.72], ["3+2", "4 bulan", 121.9, 109.18], ["5+0", "2 bulan", 105, 94], ["5+0", "4 bulan", 95, 85], ["7+0", "2 bulan", 85, 76], ["7+0", "4 bulan", 75, 67]]]],
       outright: [["Baharu", 3900], ["Ex-Trade", 3510]],
@@ -146,7 +146,7 @@ window.COWAY = {
     {
       id: "ombak", cat: "water", group: "tabletop", name: "Ombak", model: "CHP-7310R", from: 90,
       img: "assets/products/ombak.webp",
-      bullets: ["Tangki panas terbesar barisan atas meja", "6 pilihan suhu panas", "Sterilisasi UV setiap pengeluaran"],
+      bullets: ["Tangki air panas terbesar dalam barisan atas meja", "6 pilihan suhu panas", "Sterilisasi UV setiap kali air dikeluarkan"],
       specs: { "Kitaran servis": "2 / 4 bulan", "Penapisan": "Reverse Osmosis", "Tangki": "Panas 3.4L · Biasa 7.8L · Sejuk 2.3L", "Dimensi": "340 × 523 × 518 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 148.4, 133.56], ["3+2", "4 bulan", 137.8, 124.02], ["5+0", "2 bulan", 120, 108], ["5+0", "4 bulan", 110, 99], ["7+0", "2 bulan", 100, 90], ["7+0", "4 bulan", 90, 81]]]],
       outright: [["Baharu", 4510], ["Ex-Trade", 4050]],
@@ -172,7 +172,7 @@ window.COWAY = {
     {
       id: "coreslim", cat: "water", group: "floor", name: "Core Slim", model: "CHP-5731N", from: 89,
       img: "assets/products/coreslim.webp",
-      bullets: ["Kapasiti 12 liter, profil langsing", "Penapisan Nanotrap™ dengan UV", "Dulang boleh laras untuk jag & botol"],
+      bullets: ["Kapasiti 12 liter, profil langsing", "Penapisan Nanotrap™ dengan UV", "Dulang boleh dilaras untuk jag & botol"],
       colors: [["Pebble Gray", "#2c2d30"], ["Porcelain White", "#f2f1ee"]],
       specs: { "Kitaran servis": "2 bulan", "Penapisan": "Coway Nanotrap™", "Tangki": "Panas 3.0L · Biasa 5.5L · Sejuk 3.5L", "Dimensi": "260 × 448 × 1170 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 136.74, 122.96], ["5+0", "2 bulan", 109, 98], ["7+0", "2 bulan", 89, 80]]]],
@@ -181,7 +181,7 @@ window.COWAY = {
     {
       id: "coreplus", cat: "water", group: "floor", name: "Core Plus", model: "CHP-5721L", from: 93,
       img: "assets/products/coreplus.webp",
-      bullets: ["Kapasiti tangki terbesar negara (21.1L)", "Penapisan berlapis + UV dalam & luar", "Ketinggian ergonomik, reka langsing"],
+      bullets: ["Kapasiti tangki terbesar negara (21.1L)", "Penapisan berlapis + UV dalam & luar", "Ketinggian ergonomik, reka bentuk langsing"],
       specs: { "Kitaran servis": "2 / 4 bulan", "Penapisan": "Reverse Osmosis", "Tangki": "Panas 3.6L · Biasa 10.4L · Sejuk 7.1L", "Dimensi": "320 × 488 × 1260 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 151.58, 135.68], ["3+2", "4 bulan", 140.98, 126.14], ["5+0", "2 bulan", 123, 110], ["5+0", "4 bulan", 113, 101], ["7+0", "2 bulan", 103, 92], ["7+0", "4 bulan", 93, 83]]]],
       outright: [["Baharu", 6500], ["Ex-Trade", 5850]],
@@ -197,7 +197,7 @@ window.COWAY = {
     {
       id: "outdoor", cat: "water", group: "outdoor", name: "Coway Outdoor Filter", model: "POE-23A", from: 60,
       img: "assets/products/outdoor.webp",
-      bullets: ["Membran ultrafiltrasi PVDF (36 bulan)", "Flushing automatik dinaik taraf", "Tanpa elektrik, sesuai aliran air perlahan"],
+      bullets: ["Membran ultrafiltrasi PVDF (36 bulan)", "Sistem flushing automatik yang dinaik taraf", "Tanpa elektrik, sesuai untuk aliran air perlahan"],
       specs: { "Kitaran servis": "6 bulan", "Penapis": "PVDF Ultrafiltration Membrane", "Dimensi": "Ø127 × 1090 mm", "Kuasa": "Tiada elektrik diperlukan" },
       plans: [["Heart Service", [["3+2", "6 bulan", 106, 95.4], ["5+0", "6 bulan", 80, 72], ["7+0", "6 bulan", 60, 54]]]],
       outright: [["Baharu", 3500], ["Ex-Trade", 3150]],
@@ -254,7 +254,7 @@ window.COWAY = {
     {
       id: "atrium", cat: "air", group: "purifier", name: "Atrium", model: "AP-3525I", from: 89,
       img: "assets/products/atrium.webp",
-      bullets: ["Sedutan dwi-motor berprestasi tinggi", "Dwi sistem penapisan 3 peringkat", "Liputan luas sehingga 1,250 kaki²"],
+      bullets: ["Sedutan dwi-motor berprestasi tinggi", "Dwi-sistem penapisan 3 peringkat", "Liputan luas sehingga 1,250 kaki²"],
       colors: [["Sand Beige", "#d9c8b0"], ["Porcelain White", "#f2f1ee"], ["Pebble Gray", "#2c2d30"]],
       specs: { "Kitaran servis": "2 / 4 bulan", "Liputan": "116m²", "Kuasa": "65W", "Dimensi": "360 × 497 × 825.5 mm" },
       plans: [["Heart Service", [["3+2", "2 bulan", 147.34, 132.5], ["3+2", "4 bulan", 136.74, 122.96], ["5+0", "2 bulan", 119, 107], ["5+0", "4 bulan", 109, 98], ["7+0", "2 bulan", 99, 89], ["7+0", "4 bulan", 89, 80]]]],
@@ -263,13 +263,13 @@ window.COWAY = {
     {
       id: "noble2", cat: "air", group: "purifier", name: "Noble 2", model: "AP-2023K", from: 90,
       img: "assets/products/noble2.webp",
-      bullets: ["Reka bentuk premium yang diperhalusi", "Pet Mode untuk pemilik haiwan", "Penapisan 6 langkah dengan UVC"],
+      bullets: ["Reka bentuk premium yang diperhalusi", "Pet Mode untuk pemilik haiwan peliharaan", "Penapisan 6 langkah dengan UVC"],
       specs: { "Kitaran servis": "4 bulan", "Liputan": "67m²", "Kuasa": "55W", "Dimensi": "320 × 320 × 805 mm" },
       plans: [
         ["Heart Service", [["3+2", "4 bulan", 143.1, 128.26], ["5+0", "4 bulan", 115, 103], ["7+0", "4 bulan", 95, 85]]],
         ["Self-Service", [["3+2", "12 bulan", 137.8, 122.96], ["5+0", "12 bulan", 110, 98], ["7+0", "12 bulan", 90, 80]]],
       ],
-      note: "Harga sewaan adalah harga promosi.",
+      note: "Harga sewaan ialah harga promosi.",
       outright: [["Baharu", 4700], ["Ex-Trade", 4230]],
     },
 
@@ -277,7 +277,7 @@ window.COWAY = {
     {
       id: "fseries", cat: "cooling", group: "ac", name: "F-Series", model: "CAC09-ST01F · CAC12-ST01F", from: 80,
       img: "assets/products/fseries.webp",
-      bullets: ["Penapisan 5 langkah", "Ciri self-cleaning hapuskan bakteria", "4-way auto swing, angin lembut"],
+      bullets: ["Penapisan 5 langkah", "Fungsi self-cleaning menghapuskan bakteria", "4-way auto swing, angin lembut"],
       specs: { "Kuasa kuda": "1.0hp · 1.5hp", "Kitaran servis": "6 bulan", "Refrigeran": "R32", "Bekalan kuasa": "220–240V / 50Hz" },
       plans: [["Termasuk servis 6 bulan", [["1.0hp · 5+0", "6 bulan", 100, 90], ["1.0hp · 7+0", "6 bulan", 80, 72], ["1.5hp · 5+0", "6 bulan", 110, 99], ["1.5hp · 7+0", "6 bulan", 90, 81]]]],
       note: "Penarafan tenaga 5 bintang untuk model 1.5hp. Sewaan sahaja.",
@@ -360,7 +360,7 @@ window.COWAY = {
     {
       id: "mine", cat: "massage", group: "chair", name: "BEREX Mine", model: "MC-B02", from: 105,
       img: "assets/products/mine.webp",
-      bullets: ["Saiz kira-kira 24% lebih kecil", "Urutan lutut ke betis boleh tukar", "Body scan & rawatan haba 3 zon"],
+      bullets: ["Saiz kira-kira 24% lebih kecil", "Urutan lutut ke betis boleh ditukar", "Body scan & rawatan haba 3 zon"],
       colors: [["Rose Brown", "#8a4f3d"], ["Ink Black", "#1b1c1f"], ["Champagne Beige", "#d8c6a8"]],
       specs: { "Mod urutan": "12", "Rangka": "SL frame · 2D", "Kitaran servis": "12 bulan", "Dimensi (tegak)": "740 × 1250 × 1030 mm" },
       plans: [["Pelan 5+0", [["5+0", "Termasuk servis", 120, 108], ["5+0", "Tanpa servis", 105, 94]]]],
@@ -369,7 +369,7 @@ window.COWAY = {
     {
       id: "massagechair", cat: "massage", group: "chair", name: "Coway Massage Chair", model: "MC-ST01B", from: 125,
       img: "assets/products/massagechair.webp",
-      bullets: ["Kerusi urut trinity mampu milik pertama", "Relaksasi kepala hingga kaki", "Zero wall gap, jimat ruang"],
+      bullets: ["Kerusi urut trinity pertama yang mampu milik", "Relaksasi kepala hingga kaki", "Zero wall gap – jimat ruang"],
       specs: { "Teknik urutan": "5", "Kuasa": "180W", "Kitaran servis": "12 bulan", "Dimensi (tegak)": "740 × 1460 × 1160 mm" },
       plans: [["Pelan 5+0", [["5+0", "Termasuk servis", 145, 130], ["5+0", "Tanpa servis", 125, 112]]]],
       outright: [["Baharu", 8199], ["Ex-Trade", 7370]],
@@ -377,7 +377,7 @@ window.COWAY = {
     {
       id: "pebble", cat: "massage", group: "chair", name: "BEREX Pebble", model: "MC-C01", from: 130,
       img: "assets/products/pebble.webp",
-      bullets: ["Modul urutan 3D boleh laras", "11 mod urutan, body scan", "Ottoman & kusyen haba percuma"],
+      bullets: ["Modul urutan 3D boleh dilaras", "11 mod urutan, body scan", "Ottoman & kusyen haba percuma"],
       colors: [["Hazy Blue", "#8fa3b8"], ["Terracotta Pink", "#c98f80"], ["Sand Beige", "#d9c8b0"], ["Mystic Grey", "#6d6f73"]],
       specs: { "Mod urutan": "11", "Haba": "2 zon", "Kitaran servis": "12 bulan", "Dimensi (tegak)": "735 × 1015 × 1120 mm" },
       plans: [["Pelan 5+0", [["5+0", "Termasuk servis", 145, 130], ["5+0", "Tanpa servis", 130, 117]]]],
@@ -386,7 +386,7 @@ window.COWAY = {
     {
       id: "senno", cat: "massage", group: "chair", name: "BEREX Senno", model: "MC-DLX01", from: 145, isNew: true,
       img: "assets/products/senno.webp",
-      bullets: ["Health Scan dengan 16 program", "Rola 4D & sistem 34 beg udara", "Smart Voice Control & memori tersuai"],
+      bullets: ["Health Scan dengan 16 program", "Roller 4D & sistem 34 beg udara", "Smart Voice Control & memori tersuai"],
       specs: { "Program": "16", "Beg udara": "34", "Kitaran servis": "12 bulan", "Dimensi": "730 × 1510 × 1121 mm" },
       plans: [["Pelan 5+0", [["5+0", "Termasuk servis", 165, 148], ["5+0", "Tanpa servis", 145, 130]]]],
       outright: [["Baharu", 9000], ["Ex-Trade", 8100]],
@@ -396,16 +396,16 @@ window.COWAY = {
       img: "assets/products/sennoplus.webp", poster: "assets/promo/sennoplus.webp",
       promo: { intro: 20, months: 5, after: 165 },
       bullets: ["AI Health Scan dengan 20 program", "Urutan 4D & 44 beg udara", "Regangan buku lali 140° & haba dwi-zon"],
-      specs: { "Program": "20", "Beg udara": "44", "Waranti": "5 tahun produk", "Dimensi": "750 × 1550 × 1121 mm" },
+      specs: { "Program": "20", "Beg udara": "44", "Waranti produk": "5 tahun", "Dimensi": "750 × 1550 × 1121 mm" },
       plans: [["Pelan 5+0", [["5+0", "Termasuk servis", 185, 166], ["5+0", "Tanpa servis", 165, 148]]]],
       outright: [["Baharu", 10000], ["Ex-Trade", 9000]],
     },
     {
       id: "massagebed", cat: "massage", group: "bed", name: "BEREX Massage Bed", model: "MB-C01 · MB-B01", from: 235,
       img: "assets/products/massagebed.webp",
-      bullets: ["Trek rata 90cm, leher hingga tulang ekor", "Rola haba 30°C–65°C, 12 tahap intensiti", "Boleh dilipat menjadi kerusi ottoman"],
+      bullets: ["Trek rata 90cm, leher hingga tulang ekor", "Roller berpemanas 30°C–65°C, 12 tahap intensiti", "Boleh dilipat menjadi kerusi ottoman"],
       colors: [["Ink Black", "#1b1c1f"], ["Champagne Beige", "#d8c6a8"]],
-      specs: { "Standard (MB-C01)": "Rola 2D · 23 mod", "Premium (MB-B01)": "Rola 3D · 30 mod", "Kitaran servis": "12 bulan", "Dimensi (buka)": "737 × 2060 × 447 mm" },
+      specs: { "Standard (MB-C01)": "Roller 2D · 23 mod", "Premium (MB-B01)": "Roller 3D · 30 mod", "Kitaran servis": "12 bulan", "Dimensi (buka)": "737 × 2060 × 447 mm" },
       plans: [["Pelan 5+0", [["Standard", "Termasuk servis", 250, 225], ["Standard", "Tanpa servis", 235, 211], ["Premium", "Termasuk servis", 290, 261], ["Premium", "Tanpa servis", 275, 247]]]],
       outright: [["Standard", 14500], ["Premium", 16000]],
     },
@@ -415,7 +415,7 @@ window.COWAY = {
       id: "primelite", cat: "sleep", group: "classic", name: "BEREX Prime Lite", model: "CMQ/CMK-AF02MF", from: 49,
       img: "assets/products/primelite.webp", poster: "assets/promo/primelite.webp",
       promo: { intro: 20, months: 5, after: 49 },
-      bullets: ["Pocket spring 5 zon, medium firm", "Fabrik sejuk & foam berventilasi", "Topper boleh tukar + 2 bantal percuma"],
+      bullets: ["Pocket spring 5 zon, medium firm", "Fabrik sejuk & foam berventilasi", "Topper boleh ditukar + 2 bantal percuma"],
       specs: { "Jenis": "Medium Firm", "Saiz": "Queen · King", "Kitaran servis": "4 bulan", "Tebal": "305 mm" },
       plans: [
         ["Tilam Queen", [["5+0", "Termasuk servis", 99, 89], ["5+0", "Tanpa servis", 69, 62], ["7+0", "Termasuk servis", 79, 71], ["7+0", "Tanpa servis", 49, 44], ["9+0", "Termasuk servis", 64, 57]]],
@@ -428,7 +428,7 @@ window.COWAY = {
     {
       id: "prime2", cat: "sleep", group: "classic", name: "BEREX Prime II", model: "CMQ/CMK-ST02", from: 70,
       img: "assets/products/prime2.webp",
-      bullets: ["Pocket spring & lateks asli 7 zon", "Fabrik anti-statik & sejuk", "Topper boleh tukar percuma"],
+      bullets: ["Pocket spring & lateks asli 7 zon", "Fabrik anti-statik & sejuk", "Topper boleh ditukar percuma"],
       specs: { "Jenis": "Soft · Firm", "Saiz": "Queen · King", "Rangka katil": "Dark Grey PU Leather · Dark Blue Velvet", "Kitaran servis": "4 bulan" },
       plans: [
         ["Tilam Queen", [["5+0", "Termasuk servis", 120, 108], ["5+0", "Tanpa servis", 90, 81], ["7+0", "Termasuk servis", 100, 90], ["7+0", "Tanpa servis", 70, 63], ["9+0", "Termasuk servis", 85, 76]]],
@@ -441,7 +441,7 @@ window.COWAY = {
     {
       id: "elite", cat: "sleep", group: "classic", name: "BEREX Elite", model: "CMQ/CMK-ST03", from: 89, isNew: true,
       img: "assets/products/elite.webp",
-      bullets: ["Pocket spring & lateks asli 9 zon", "Teknologi Sanitized® anti-bakteria & anti-hama", "Plush top premium 360mm, topper boleh tukar percuma"],
+      bullets: ["Pocket spring & lateks asli 9 zon", "Teknologi Sanitized® anti-bakteria & anti-hama", "Lapisan plush top premium 360mm, topper boleh ditukar percuma"],
       specs: { "Jenis": "Soft · Firm", "Saiz": "Queen · King", "Rangka katil": "Leather (Brown) · Fabric (Beige)", "Kitaran servis": "4 bulan", "Tebal": "330 mm" },
       plans: [
         ["Tilam Queen", [["5+0", "Termasuk servis", 139, 125], ["5+0", "Tanpa servis", 109, 98], ["7+0", "Termasuk servis", 119, 107], ["7+0", "Tanpa servis", 89, 80], ["9+0", "Termasuk servis", 104, 93]]],
@@ -482,20 +482,20 @@ window.COWAY = {
     {
       id: "flowlet", cat: "bidet", group: "bidet", name: "Flowlet", model: "BA48-A", from: 30,
       img: "assets/products/flowlet.webp",
-      bullets: ["Bateri (4 × AA), tanpa pendawaian", "Muncung membersih sendiri", "Tekanan & arah air boleh laras"],
+      bullets: ["Bateri (4 × AA), tanpa pendawaian", "Muncung pembersihan sendiri", "Tekanan & arah air boleh dilaras"],
       specs: { "Kitaran servis": "4 bulan", "Kuasa": "Bateri 4 × AA", "Dimensi": "449.5 × 505.5 × 130.5 mm" },
       plans: [["Heart Service", [["3+2", "4 bulan", 74.2, 66.78], ["5+0", "4 bulan", 50, 45], ["7+0", "4 bulan", 30, 27]]]],
-      note: "Harga sewaan adalah harga promosi.",
+      note: "Harga sewaan ialah harga promosi.",
       outright: [["Baharu", 1600], ["Ex-Trade", 1440]],
     },
     {
       id: "flowletplus", cat: "bidet", group: "bidet", name: "Flowlet Plus", model: "BAS45 · BAS46", from: 40,
       img: "assets/products/flowletplus.webp",
-      bullets: ["Sanitasi sendiri 3 langkah, air elektrolisis", "Laras suhu air, tempat duduk & pengering", "Panel sisi atau alat kawalan dinding"],
+      bullets: ["Sanitasi sendiri 3 langkah, air elektrolisis", "Laras suhu air, tempat duduk & pengering", "Panel sisi atau alat kawalan jauh di dinding"],
       specs: { "Kitaran servis": "4 bulan", "Tempat duduk": "Elongated · Round", "Kuasa": "1500W", "Sistem": "Coway i-wave®" },
       plans: [
         ["Panel sisi (BAS45)", [["3+2", "4 bulan", 84.8, 76.32], ["5+0", "4 bulan", 60, 54], ["7+0", "4 bulan", 40, 36]]],
-        ["Alat kawalan dinding (BAS46)", [["3+2", "4 bulan", 95.4, 85.86], ["5+0", "4 bulan", 70, 63], ["7+0", "4 bulan", 50, 45]]],
+        ["Alat kawalan jauh (BAS46)", [["3+2", "4 bulan", 95.4, 85.86], ["5+0", "4 bulan", 70, 63], ["7+0", "4 bulan", 50, 45]]],
       ],
       outright: [["Panel", 2100], ["Remote", 2600]],
     },
