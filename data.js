@@ -1,5 +1,5 @@
-// Coway product data — source: Coway Complete Product Catalogue (Sep–Oct 2026)
-// and current promo posters. Prices in RM, subject to SST and T&C.
+// Coway product data — source: Coway Complete Product Catalogue, 10th edition
+// (November/December 2026, VER01) and current promo posters. Prices in RM, subject to SST and T&C.
 // plans: [groupTitle, [[plan, service, monthly, exTrade], ...]]
 // promo: { intro, months, after } — taken from promo posters only.
 
@@ -161,6 +161,15 @@ window.COWAY = {
       outright: [["Baharu", 7500], ["Ex-Trade", 6750]],
     },
     {
+      id: "iconice", cat: "water", group: "tabletop", name: "Icon Ice", model: "CHPI-7410N", from: 139, isNew: true,
+      img: "assets/products/iconice.webp",
+      bullets: ["Kapasiti ais ekstra besar 1.1kg", "Ais siap dalam 12 minit, 2 saiz kiub", "Sterilisasi UV 7 peringkat & set penapis berganda"],
+      colors: [["Ice White", "#f2f1ee"], ["Ice Pink", "#f3cfd0"], ["Ice Blue", "#c9dcea"], ["Ice Gray", "#8c8f94"]],
+      specs: { "Kitaran servis": "2 bulan", "Penapisan": "Coway Nanotrap™", "Tangki": "Panas segera · Direct Flow · Sejuk 0.75L · Ais 1.1kg", "Dimensi": "240 × 488 × 465 mm" },
+      plans: [["Heart Service", [["3+2", "2 bulan", 200.34, 180.2], ["5+0", "2 bulan", 164, 147], ["7+0", "2 bulan", 139, 125]]]],
+      outright: [["Baharu", 7900], ["Ex-Trade", 7110]],
+    },
+    {
       id: "coreslim", cat: "water", group: "floor", name: "Core Slim", model: "CHP-5731N", from: 89,
       img: "assets/products/coreslim.webp",
       bullets: ["Kapasiti 12 liter, profil langsing", "Penapisan Nanotrap™ dengan UV", "Dulang boleh laras untuk jag & botol"],
@@ -308,11 +317,15 @@ window.COWAY = {
       outright: [["Baharu", 4799], ["Ex-Trade", 4310]],
     },
     {
-      id: "wd129", cat: "laundry", group: "laundry", name: "Washer Dryer 12/9KG", model: "CWD12-ST01", from: 89, isNew: true,
+      id: "wd129", cat: "laundry", group: "laundry", name: "Washer Dryer 12/9KG", model: "CWD12-ST01", from: 84, isNew: true,
       img: "assets/products/wd129.webp", poster: "assets/promo/wd129.webp",
       promo: { intro: 20, months: 7, after: 89 },
-      bullets: ["2 dalam 1: basuh 12kg & kering 9kg", "6 Sense AI Wash & Microbubble Wash", "Jimat elektrik dan air"],
-      specs: { "Kapasiti": "Basuh 12kg · Kering 9kg", "Kitaran servis": "6 bulan", "Teknologi": "6 Sense AI · Microbubble" },
+      bullets: ["2 dalam 1: basuh 12kg & kering 9kg", "6-Sense AI Wash, MicroBubble™ & AquaVortex™", "Dos detergen automatik"],
+      specs: { "Kapasiti": "Basuh 12kg · Kering 9kg", "Kitaran servis": "6 bulan", "Kuasa": "Basuh 1900W · Kering 1100W", "Dimensi": "600 × 618 × 850 mm" },
+      plans: [
+        ["Heart Service", [["3+2", "6 bulan", 136.74, 122.96], ["5+0", "6 bulan", 109, 98], ["7+0", "6 bulan", 89, 80]]],
+        ["Self-Service", [["3+2", "24 bulan", 131.44, 117.66], ["5+0", "24 bulan", 104, 93], ["7+0", "24 bulan", 84, 75]]],
+      ],
       outright: [["Baharu", 5099], ["Ex-Trade", 4580]],
     },
 
@@ -424,6 +437,19 @@ window.COWAY = {
         ["Set + katil King", [["5+0", "Termasuk servis", 189, 170], ["5+0", "Tanpa servis", 159, 143], ["7+0", "Termasuk servis", 159, 143], ["7+0", "Tanpa servis", 129, 116], ["9+0", "Termasuk servis", 144, 129]]],
       ],
       outright: [["Queen", 5780], ["King", 6380], ["Set Queen", 7480], ["Set King", 8700]],
+    },
+    {
+      id: "elite", cat: "sleep", group: "classic", name: "BEREX Elite", model: "CMQ/CMK-ST03", from: 89, isNew: true,
+      img: "assets/products/elite.webp",
+      bullets: ["Pocket spring & lateks asli 9 zon", "Teknologi Sanitized® anti-bakteria & anti-hama", "Plush top premium 360mm, topper boleh tukar percuma"],
+      specs: { "Jenis": "Soft · Firm", "Saiz": "Queen · King", "Rangka katil": "Leather (Brown) · Fabric (Beige)", "Kitaran servis": "4 bulan", "Tebal": "330 mm" },
+      plans: [
+        ["Tilam Queen", [["5+0", "Termasuk servis", 139, 125], ["5+0", "Tanpa servis", 109, 98], ["7+0", "Termasuk servis", 119, 107], ["7+0", "Tanpa servis", 89, 80], ["9+0", "Termasuk servis", 104, 93]]],
+        ["Tilam King", [["5+0", "Termasuk servis", 154, 138], ["5+0", "Tanpa servis", 124, 111], ["7+0", "Termasuk servis", 134, 120], ["7+0", "Tanpa servis", 104, 93], ["9+0", "Termasuk servis", 119, 107]]],
+        ["Set + katil Queen", [["5+0", "Termasuk servis", 188, 169], ["5+0", "Tanpa servis", 158, 142], ["7+0", "Termasuk servis", 158, 142], ["7+0", "Tanpa servis", 128, 115], ["9+0", "Termasuk servis", 143, 128]]],
+        ["Set + katil King", [["5+0", "Termasuk servis", 208, 187], ["5+0", "Tanpa servis", 178, 160], ["7+0", "Termasuk servis", 178, 160], ["7+0", "Tanpa servis", 148, 133], ["9+0", "Termasuk servis", 163, 146]]],
+      ],
+      outright: [["Queen", 6300], ["King", 6900], ["Set Queen", 7900], ["Set King", 9200]],
     },
     {
       id: "s6", cat: "sleep", group: "smart", name: "BEREX Smart Mattress S6+", model: "CMQ/CMK-AS04", from: 325,
